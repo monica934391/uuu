@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title>week1202_Clac</title>
+    <style>
+      #scr{
+        width:100%;
+        height:20%;
+        background:yellow;
+        font-size:4em;
+      }
+      input{
+        width:24.7%;
+        height:13%;
+        font-size:4em;
+      }
+    </style>     
+  <script>
+    function clk(e) {
+      scr.value = scr.value + e.value
+    }
+    function calc(e){
+      scr.value = eval(scr.value)
+    }
+    function clr(e){
+      scr.value=""
+    }
+    function calc(){
+      x1=scr.value.replace("%","/100")
+      x2=eval(x1)
+      scr.value=x2.toPrecision(15)
+    }
+  </script>
+  </head>
+   
+  <body>
+    
+    <input type="textarea" value="" id="scr">
+    <br/>
+    <input type="button" value="(" onclick="clk(this)"><input type="button" value=")" onclick="clk(this)"><input type="button" value="%" onclick="clk(this)"><input type="button" value="c" onclick="clr(this)">
+    <br/>
+    <input type="button" value="7" onclick="clk(this)"><input type="button" value="8" onclick="clk(this)"><input type="button" value="9" onclick="clk(this)"><input type="button" value="/" onclick="clk(this)">
+    <br/>
+    <input type="button" value="4" onclick="clk(this)"><input type="button" value="5" onclick="clk(this)"><input type="button" value="6" onclick="clk(this)"><input type="button" value="*" onclick="clk(this)">
+    <br/>
+    <input type="button" value="1" onclick="clk(this)"><input type="button" value="2" onclick="clk(this)"><input type="button" value="3" onclick="clk(this)"><input type="button" value="-" onclick="clk(this)">
+    <br/>
+    <input type="button" value="0" onclick="clk(this)"><input type="button" value="." onclick="clk(this)"><input type="button" value="=" onclick="calc(this)"><input type="button" value="+" onclick="clk(this)">
+    <br/>
+  </body>
+</html>
